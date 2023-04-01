@@ -329,5 +329,4 @@ def amazon_product_ret():
     return d
 
 
-if __name__=="__main__":
-    app.run(host='0.0.0.0')
+
