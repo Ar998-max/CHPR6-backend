@@ -36,7 +36,7 @@ def amazon_product_ret():
     product_overview_data = []
 
     headers = ({'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)AppleWebKit/605.1.15 (KHTML, like Gecko)Version/12.1.1 Safari/605.1.15', 'Accept-Language': 'en-US, en;q=0.5'})
-
+    print(headers)
 
     if ip != 'India':
         for keyword in keyword_list:
@@ -71,6 +71,7 @@ def amazon_product_ret():
                             )
                     else:
                         print('failed')
+                        print(headers)
                         ## Get All Pages
                         if "&page=1" in url:
                             available_pages = sel.xpath(
