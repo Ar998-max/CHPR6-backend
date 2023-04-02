@@ -37,8 +37,9 @@ def amazon_product_ret():
 
     headers = ({'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)AppleWebKit/605.1.15 (KHTML, like Gecko)Version/12.1.1 Safari/605.1.15', 'Accept-Language': 'en-US, en;q=0.5'})
     proxies = {
-        "http": "64.225.4.12:9984",
-        "https": "64.225.4.12:9984"
+        "http": "2.56.119.93:5074",
+        "https": "2.56.119.93:5074",
+        
     }
     print(headers)
 
