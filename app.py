@@ -36,6 +36,10 @@ def amazon_product_ret():
     product_overview_data = []
 
     headers = ({'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)AppleWebKit/605.1.15 (KHTML, like Gecko)Version/12.1.1 Safari/605.1.15', 'Accept-Language': 'en-US, en;q=0.5'})
+    proxies = {
+        "http": "49.12.4.230:8080",
+        "https": "49.12.4.230:8080"
+    }
     print(headers)
 
     if ip != 'India':
@@ -43,7 +47,7 @@ def amazon_product_ret():
             url_list = [f'https://www.amazon.com/s?k={keyword}&page=1', ]
             for url in url_list:
                 try:
-                    response = requests.get(url, headers=headers)
+                    response = requests.get(url, headers=headers, proxies=proxies)
 
                     if response.status_code == 200:
                         sel = Selector(text=response.text)
